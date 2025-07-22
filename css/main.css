@@ -1499,13 +1499,12 @@ START: Header CSS
 }
 
 .site-logo {
-  max-width: 150px;
+  max-width: 194px;
   width: 100%;
 }
 .site-logo .logo {
   display: inline-block;
   width: 100%;
-  max-width: 104px;
 }
 .site-logo .logo img {
   width: 100%;
