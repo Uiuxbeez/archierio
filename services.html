@@ -24,22 +24,6 @@
       <link rel="stylesheet" href="css/backToTop.css">
       <link rel="stylesheet" href="css/meanmenu.css">
       <link rel="stylesheet" href="css/main.css">
-
-       <style>
- .floating-toggle-btn {
-      position: fixed;
-      top: 50%;
-      right: -41px;
-      z-index: 1051;
-      border-radius: 8px 8px 0px 0;
-      transform: rotate(-90deg);
-    }
-     /* Shift button left when offcanvas is open */
-    .offcanvas.show + .floating-toggle-btn {
-      right: 389px; /* same as offcanvas width */
-    }
-  </style>
-
    </head>
 
    <body>
@@ -755,7 +739,7 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header bg-dark text-white">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Get Free Consultation & Site Visit</h5>
+    <h6 class="offcanvas-title" id="offcanvasRightLabel">Get Free Consultation & Site Visit</h6>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body p-0">
@@ -816,6 +800,7 @@
 
 <!-- Floating Toggle Button -->
 <button class="btn btn-primary floating-toggle-btn">Get a Quote</button>
+
       <!-- JS here -->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
@@ -834,28 +819,4 @@
       <script src="js/wow.min.js"></script>
       <script src="js/main.js"></script>
    
- <script>
-  const toggleBtn = document.querySelector('.floating-toggle-btn');
-  const offcanvasEl = document.getElementById('offcanvasRight');
-
-  const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
-
-  toggleBtn.addEventListener('click', () => {
-    if (offcanvasEl.classList.contains('Get a Quote')) {
-      offcanvas.hide();
-    } else {
-      offcanvas.show();
-    }
-  });
-
-  offcanvasEl.addEventListener('shown.bs.offcanvas', () => {
-    toggleBtn.textContent = 'Hide';
-  });
-
-  offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
-    toggleBtn.textContent = 'Get a Quote';
-  });
-</script>
-
-
 </body></html>

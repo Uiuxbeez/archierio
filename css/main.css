@@ -15055,5 +15055,24 @@ START: Video CSS
     display: none;
   }
 }
-
+.nice-select {
+  background-color: transparent;
+  color: #a49ea0;
+  border: 1px solid #68696e;
+  margin-bottom: 20px;
+}
+ .floating-toggle-btn {
+      position: fixed;
+      top: 50%;
+      right: -41px;
+      z-index: 1051;
+      border-radius: 8px 8px 0px 0;
+      transform: rotate(-90deg);
+      background-color: #b99a80 !important;
+      border: 1px solid #b99a80;
+    }
+     /* Shift button left when offcanvas is open */
+    .offcanvas.show + .floating-toggle-btn {
+      right: 389px; /* same as offcanvas width */
+    }
 /* !END: Video CSS *//*# sourceMappingURL=main.css.map */

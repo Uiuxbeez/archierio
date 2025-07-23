@@ -1477,6 +1477,70 @@
       <div class="mouseCursor cursor-inner"><span>Drag</span></div>
       <!-- end: Corsor Area -->
 
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header bg-dark text-white">
+    <h6 class="offcanvas-title" id="offcanvasRightLabel">Get Free Consultation & Site Visit</h6>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+      <div class="contact-form-box p-0" data-wow-delay=".5s">
+         <form action="send-email.php" method="POST" class="contact-form-one start-0">
+            <div class="row">
+               <div class="col-lg-12">
+                  <div class="form-input">
+                  <input type="text" id="name" name="name" placeholder="Name" required>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="form-input">
+                  <input type="email" id="emailTwo" name="email" placeholder="Email" required>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="form-input">
+                  <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="form-input">
+                  <select name="property_type" required>
+                     <option value="">Select Type</option>
+                     <option value="Appartment">Appartment</option>
+                     <option value="Villa">Villa</option>
+                  </select>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="form-input">
+                  <select name="bhk" required>
+                     <option value="">Select BHK</option>
+                     <option value="1">1 BHK</option>
+                     <option value="2">2 BHK</option>
+                     <option value="3">3 BHK</option>
+                     <option value="4">4 BHK</option>
+                  </select>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="form-input">
+                  <textarea name="budget" id="message" placeholder="Your Budget..." required></textarea>
+                  </div>
+               </div>
+               <div class="col-lg-12">
+                  <div class="submit-button">
+                  <button type="submit" class="tj-primary-btn-five">Get a Free Quote</button>
+                  </div>
+               </div>
+            </div>
+         </form>
+
+      </div>
+  </div>
+</div>
+
+<!-- Floating Toggle Button -->
+<button class="btn btn-primary floating-toggle-btn">Get a Quote</button>
+
       <!-- JS here -->
       <script src="js/jquery.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>

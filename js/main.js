@@ -484,3 +484,25 @@
       wow.init();
    });
 })(jQuery);
+
+
+ const toggleBtn = document.querySelector('.floating-toggle-btn');
+  const offcanvasEl = document.getElementById('offcanvasRight');
+
+  const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
+
+  toggleBtn.addEventListener('click', () => {
+    if (offcanvasEl.classList.contains('Get a Quote')) {
+      offcanvas.hide();
+    } else {
+      offcanvas.show();
+    }
+  });
+
+  offcanvasEl.addEventListener('shown.bs.offcanvas', () => {
+    toggleBtn.textContent = 'Hide';
+  });
+
+  offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+    toggleBtn.textContent = 'Get a Quote';
+  });
