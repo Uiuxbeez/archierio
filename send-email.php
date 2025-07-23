@@ -1,59 +1,88 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-require 'vendor/autoload.php'; // if using Composer
-// OR if using manual download:
-// require 'src/PHPMailer.php';
-// require 'src/SMTP.php';
-// require 'src/Exception.php';
+    // Sanitize and collect form data
+    $name           = htmlspecialchars(trim($_POST['name']));
+    $email          = htmlspecialchars(trim($_POST['email']));
+    $phone          = htmlspecialchars(trim($_POST['phone']));
+    $property_type  = htmlspecialchars(trim($_POST['property_type']));
+    $bhk            = htmlspecialchars(trim($_POST['bhk']));
+    $budget         = htmlspecialchars(trim($_POST['budget']));
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $mail = new PHPMailer(true);
+    // To address
+    $to = "mages.sbca@gmail.com"; // 🔁 Replace with your actual destination email
 
-    try {
-        // Server settings
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';  // Use your email provider's SMTP
-        $mail->SMTPAuth = true;
-        $mail->Username = 'mail2vefx@gmail.com';     // Your Gmail address
-        $mail->Password = '@$Vinod5@$';       // Gmail App Password
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+    // Email subject
+    $subject = "New Property Inquiry from $name";
 
-        // Sender and recipient
-        $mail->setFrom('mail2vefx@gmail.com', 'Real Estate Form');
-        $mail->addAddress('mail2vefx@gmail.com'); // Your receiving email
+    // HTML email body
+    $message = "
+    <html>
+    <head>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          color: #333;
+          background-color: #f9f9f9;
+          padding: 20px;
+        }
+        .container {
+          background-color: #ffffff;
+          border: 1px solid #ddd;
+          padding: 20px;
+          border-radius: 8px;
+          max-width: 600px;
+          margin: auto;
+        }
+        h2 {
+          color: #2c3e50;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        td {
+          padding: 10px 0;
+        }
+        .label {
+          font-weight: bold;
+          color: #555;
+        }
+        .value {
+          color: #333;
+        }
+      </style>
+    </head>
+    <body>
+      <div class='container'>
+        <h2>New Property Inquiry</h2>
+        <table>
+          <tr><td class='label'>Name:</td><td class='value'>$name</td></tr>
+          <tr><td class='label'>Email:</td><td class='value'>$email</td></tr>
+          <tr><td class='label'>Phone:</td><td class='value'>$phone</td></tr>
+          <tr><td class='label'>Property Type:</td><td class='value'>$property_type</td></tr>
+          <tr><td class='label'>BHK:</td><td class='value'>$bhk BHK</td></tr>
+          <tr><td class='label'>Budget:</td><td class='value'>$budget</td></tr>
+        </table>
+        <p style='margin-top: 20px;'>Please reach out to the client for more details.</p>
+      </div>
+    </body>
+    </html>
+    ";
 
-        // Content
-        $mail->isHTML(true);
-        $mail->Subject = 'New Property Inquiry';
+    // Headers
+    $headers  = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: sales@archierio.in\r\n"; // ✅ Recommended to use domain-based sender
+    $headers .= "Reply-To: $email\r\n";
 
-        // Sanitize form data
-        $name = htmlspecialchars($_POST['name']);
-        $email = htmlspecialchars($_POST['email']);
-        $phone = htmlspecialchars($_POST['phone']);
-        $property_type = htmlspecialchars($_POST['property_type']);
-        $bhk = htmlspecialchars($_POST['bhk']);
-        $budget = htmlspecialchars($_POST['budget']);
-
-        // Email body
-        $body = "
-            <h3>New Inquiry Details</h3>
-            <p><strong>Name:</strong> $name</p>
-            <p><strong>Email:</strong> $email</p>
-            <p><strong>Phone:</strong> $phone</p>
-            <p><strong>Property Type:</strong> $property_type</p>
-            <p><strong>BHK:</strong> $bhk</p>
-            <p><strong>Budget:</strong> $budget</p>
-        ";
-
-        $mail->Body = $body;
-
-        $mail->send();
-        echo 'Message sent successfully!';
-    } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    // Send the email
+    if (mail($to, $subject, $message, $headers)) {
+        echo "Success! Your inquiry has been sent.";
+    } else {
+        echo "Sorry, the message could not be sent.";
     }
+} else {
+    echo "Invalid form submission.";
 }
 ?>
