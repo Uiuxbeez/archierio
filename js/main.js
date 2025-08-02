@@ -329,7 +329,7 @@
    // Brand Slider Js
    if ($(".tj-brand-slider2").length > 0) {
       var brand = new Swiper(".tj-brand-slider2", {
-         slidesPerView: 4,
+         slidesPerView: 8,
          loop: true,
          autoplay: true,
          breakpoints: {
@@ -346,10 +346,10 @@
                slidesPerView: 4,
             },
             992: {
-               slidesPerView: 4,
+               slidesPerView: 5,
             },
             1024: {
-               slidesPerView: 4,
+               slidesPerView: 8,
             },
          },
       });
