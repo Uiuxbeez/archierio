@@ -74,7 +74,7 @@ START: Theme Default CSS
   --tj-fs-h2: 55px;
   --tj-fs-h3: 30px;
   --tj-fs-h4: 28px;
-  --tj-fs-h5: 24px;
+  --tj-fs-h5: 22px;
   --tj-fs-h6: 18px;
   /**
      @Color Declaration
@@ -6904,11 +6904,7 @@ START: Service CSS
   .service-accordion .tabs-content-area .service-title .title {
     font-size: 18px;
   }
-  .service-accordion .tab-content .tabs-wrapper {
-    max-width: 300px;
-  }
   .service-accordion .tab-content .tabs-wrapper .service-text {
-    max-width: 275px;
     padding: 25px 15px 25px 50px;
   }
   .service-accordion .tab-content .tabs-wrapper .service-text .service-icon {
@@ -8514,11 +8510,11 @@ START: Difference CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 15px;
   border: 1px solid var(--tj-color-border-10);
   position: relative;
   z-index: 1;
-  padding: 35px 15px 35px 50px;
+  padding: 15px 25px 25px 15px;
   margin-bottom: 30px;
 }
 .difference-item-two::after, .difference-item-two::before {
@@ -9381,7 +9377,7 @@ START: Team CSS
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .team-item .team-content {
-    padding: 35px 15px 35px 60px;
+    padding: 35px 15px 35px 35px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
@@ -12148,11 +12144,8 @@ START: Hero CSS
   .hero-top-content .hero-title {
     font-size: 70px;
   }
-  .hero-top-content .hero-title span {
-    max-width: 320px;
-  }
   .hero-top-content .desc {
-    right: 40px;
+    right: -40px;
     top: -20px;
   }
 }
@@ -12165,12 +12158,9 @@ START: Hero CSS
   .hero-top-content .hero-title {
     font-size: 65px;
   }
-  .hero-top-content .hero-title span {
-    max-width: 280px;
-  }
   .hero-top-content .desc {
     max-width: 420px;
-    right: -35px;
+    right: -40px;
     top: -20px;
   }
 }
@@ -14727,7 +14717,7 @@ START: Success CSS
   z-index: 3;
 }
 .success-item .success-left-content .tj-count {
-  font-size: 180px;
+  font-size: 104px;
   font-weight: var(--tj-fw-sbold);
   font-family: var(--tj-ff-heading);
   color: var(--tj-color-theme-primary);
@@ -14735,6 +14725,10 @@ START: Success CSS
   line-height: 1;
   display: block;
   margin-bottom: 20px;
+}
+.success-item .success-left-content .tj-count p {
+  font-size: 25px;
+  line-height: 32px;
 }
 .success-item .success-left-content .title {
   font-size: 23px;
@@ -15095,3 +15089,17 @@ START: Video CSS
       right: 389px; /* same as offcanvas width */
     }
 /* !END: Video CSS *//*# sourceMappingURL=main.css.map */
+.expanded {
+    -webkit-line-clamp: unset;
+  }
+  .toggle-btn {
+    color: #b99a80;
+    cursor: pointer;
+  }
+  .tj-heading-area h2 {
+    line-height: 1;
+  }
+  .text-xs {
+    font-size: 23px;
+    line-height: 20px;
+  }

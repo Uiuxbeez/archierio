@@ -340,7 +340,7 @@
                </div>
                <div class="mainmenu main-mobile-menu d-none d-lg-inline-flex" id="main-menu">
                   <ul>
-                     <li class="current-menu-item">
+                     <li>
                         <a href="index.html">Home</a>
                      </li>
                      <li><a href="about.html">About</a></li>
@@ -348,7 +348,7 @@
                      <li><a href="portfolio.html">Portfolio</a></li>
                      <li class="d-none"><a href="blogs.html">Blog</a></li>
                      <li><a href="careers.html">Careers</a></li>
-                     <li><a href="contact.html">Contact</a></li>
+                     <li class="current-menu-item"><a href="contact.html">Contact</a></li>
                   </ul>
                </div>
                <div class="header-right-infos">
@@ -538,16 +538,16 @@
                               <div class="contact-socials">
                                  <ul>
                                     <li>
-                                       <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                       <a href="https://www.facebook.com/archieriodesigns/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
                                     </li>
                                     <li>
-                                       <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                                       <a href="https://www.instagram.com/archieriodesigns?igshid=1pwyac5nawbw3" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                     </li>
                                     <li>
-                                       <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                       <a href="https://www.youtube.com/channel/UCHWj1lsouS4w0byeR7aMb7Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                                     </li>
                                     <li>
-                                       <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                       <a href="https://www.linkedin.com/company/archieriodesigns" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                                     </li>
                                  </ul>
                               </div>
@@ -555,73 +555,65 @@
                         </div>
                      </div>
                      <div class="col-lg-6">
-                        <div class="contact-form-box wow fadeInRight" data-wow-delay=".5s">
-                           <div class="contact-form-one">
-                              <div class="contact-text">
-                                 <h2 class="title">Drop the Message</h2>
-                                 <div class="desc">
-                                    <p>Please feel free to get in touch using the form below. We'd love to hear for you.</p>
+                        <div class="contact-form-box fadeInRight p-0" data-wow-delay=".5s">
+                        <div class="contact-form-one">
+                        <div class="contact-text">
+                           <h2 class="title">Let’s talk interiors!</h2>
+                           <div class="desc">
+                              <p>Luxury is personal. Tell us what inspires your home. We are all ears.</p>
+                           </div>
+                        </div>
+                        <form action="send-email.php" method="POST" class="start-0">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="form-input">
+                                 <input type="text" id="name" name="name" placeholder="Name" required>
                                  </div>
                               </div>
-                              <div class="row">
-                                 <div class="col-lg-6">
-                                    <div class="form-input">
-                                       <input type="text" id="name" name="name" placeholder="Name" required="">
-                                    </div>
+                              <div class="col-lg-12">
+                                 <div class="form-input">
+                                 <input type="email" id="emailTwo" name="email" placeholder="Email" required>
                                  </div>
-                                 <div class="col-lg-6">
-                                    <div class="form-input">
-                                       <input type="email" id="emailTwo" name="email" placeholder="Email" required="">
-                                    </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="form-input">
+                                 <input type="tel" id="phone" name="phone" placeholder="Phone" required>
                                  </div>
-                                 <div class="col-lg-6">
-                                    <div class="form-input">
-                                       <input type="tel" id="phone" name="phone" placeholder="Phone" required="">
-                                    </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="form-input">
+                                 <select name="property_type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="Appartment">Appartment</option>
+                                    <option value="Villa">Villa</option>
+                                 </select>
                                  </div>
-                                 <div class="col-lg-6">
-                                    <div class="form-input">
-                                       <input type="text" id="address" name="address" placeholder="Address" required="">
-                                    </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="form-input">
+                                 <select name="bhk" required>
+                                    <option value="">Select BHK</option>
+                                    <option value="1">1 BHK</option>
+                                    <option value="2">2 BHK</option>
+                                    <option value="3">3 BHK</option>
+                                    <option value="4">4 BHK</option>
+                                 </select>
                                  </div>
-                                 <div class="col-lg-12">
-                                    <div class="form-input">
-                                       <div class="tj-nice-select-box">
-                                          <div class="tj-select">
-                                             <select class="nice-select" style="display: none">
-                                                <option value="2">Select Services</option>
-                                                <option value="2">Home Renovation</option>
-                                                <option value="2">Constructions</option>
-                                                <option value="2">Architecture Design</option>
-                                                <option value="2">Residential Space</option>
-                                             </select>
-                                             <div class="nice-select" tabindex="0">
-                                                <span class="current">Select Services</span>
-                                                <ul class="list">
-                                                   <li data-value="2" class="option selected focus">Select Services</li>
-                                                   <li data-value="2" class="option">Home Renovation</li>
-                                                   <li data-value="2" class="option">Constructions</li>
-                                                   <li data-value="2" class="option">Architecture Design</li>
-                                                   <li data-value="2" class="option">Residential Space</li>
-                                                </ul>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="form-input">
+                                 <textarea name="budget" id="message" placeholder="Your Budget..." required></textarea>
                                  </div>
-                                 <div class="col-lg-12">
-                                    <div class="form-input">
-                                       <textarea name="text" id="message" placeholder="Write Message..."></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="col-lg-12">
-                                    <div class="submit-button">
-                                       <button class="tj-primary-btn-five">Send Message</button>
-                                    </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <div class="submit-button">
+                                 <button type="submit" class="tj-primary-btn-five">Get a Free Consultation</button>
                                  </div>
                               </div>
                            </div>
+                        </form>
                         </div>
+                     </div>  
                      </div>
                   </div>
                </div>
@@ -631,8 +623,7 @@
                   <div class="row">
                      <div class="col-12">
                         <div class="google-map wow fadeInUp" data-wow-delay=".6s">
-                           <iframe src="https://maps.google.com/maps?width=100%25&height=750&hl=en&q=New%20york+(My%20Business%20Name)&t=&z=14&ie=UTF8&iwloc=B&output=embed">
-                           </iframe>
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9852517430013!2d77.63373407330212!3d12.90866931625842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15293119f32d%3A0x9df2f3c14e5434fa!2sArchierio%20Design%20Studio!5e0!3m2!1sen!2sin!4v1755000195950!5m2!1sen!2sin"></iframe>
                         </div>
                      </div>
                   </div>
@@ -643,26 +634,26 @@
                   <div class="row">
                      <div class="col-xl-4 col-lg-6">
                         <div class="contact_item wow fadeInUp" data-wow-delay=".7s">
-                           <div class="contact-title">
-                              <h5 class="title">Send Phone</h5>
+                           <div class="contact-title w-100">
+                              <h5 class="title">Send Phone</h5><br>
                            </div>
                            <div class="contact-link">
                               <ul>
-                                 <li><a href="tel:Free+23(000)-985">Free +23 (000)-985</a></li>
-                                 <li><a href="tel:+(000)1243396">+ (000) 124 - 3396</a></li>
+                                 <li><a href="tel:+000(123)85511">+ 0 90802 10304</a></li>
                               </ul>
                            </div>
                         </div>
                      </div>
                      <div class="col-xl-4 col-lg-6">
                         <div class="contact_item wow fadeInUp" data-wow-delay=".8s">
-                           <div class="contact-title">
+                           <div class="contact-title w-100">
                               <h5 class="title">Send Email</h5>
                            </div>
                            <div class="contact-link">
                               <ul>
-                                 <li><a href="mailto:support@gmail.com,">support@gmail.com,</a></li>
-                                 <li><a href="mailto:info@company.com">info@company.com</a></li>
+                                 <li><a href="mailto:info@company.com
+                                 ">sales@archierio.in
+                                 </a></li>
                               </ul>
                            </div>
                         </div>
@@ -674,8 +665,7 @@
                            </div>
                            <div class="contact-link">
                               <ul>
-                                 <li>Josefstter Street,</li>
-                                 <li>14 Vidna, America</li>
+                                 <li>No.427, 23rd Cross, 9th Main Road, 7th Sector, HSR Layout, Bangalore - 560102</li>
                               </ul>
                            </div>
                         </div>
@@ -723,6 +713,7 @@
                         </div>
                         <nav>
                            <ul>
+                              <li><a href="index.html">Home</a></li>
                               <li><a href="about.html">About Us</a></li>
                               <li class="d-none"><a href="blogs.html">Blog</a></li>
                               <li><a href="careers.html">Careers</a></li>
@@ -738,12 +729,11 @@
                         </div>
                         <nav>
                            <ul>
-                              <li><a href="services.html">Complete Interior Solutions</a></li>
-                              <li><a href="services.html">Smart and Modernized Home</a></li>
-                              <li><a href="services.html">Stylish Furnishings & Door</a></li>
-                              <li><a href="services.html">Finishing Touches That Matter</a></li>
-                              <li><a href="services.html">Premium Hardware & Accessories</a></li>
-                              <li><a href="services.html">Home Decors & Flooring</a></li>
+                              <li><a href="services.html">Turnkey Interior Solutions(End-to-End)</a></li>
+                              <li><a href="services.html">Furnishings, Decor & Styling</a></li>
+                              <li><a href="services.html">Smart Living & Automation</a></li>
+                              <li><a href="services.html">Functional Fixtures & Finishes</a></li>
+                              <li><a href="services.html">Customized Work & Office Spaces</a></li>
                            </ul>
                         </nav>
                      </div>
@@ -869,7 +859,7 @@
                </div>
                <div class="col-lg-12">
                   <div class="submit-button">
-                  <button type="submit" class="tj-primary-btn-five">Get a Free Quote</button>
+                  <button type="submit" class="tj-primary-btn-five">Get a Free Consultation</button>
                   </div>
                </div>
             </div>
