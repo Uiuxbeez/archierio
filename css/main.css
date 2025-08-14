@@ -143,6 +143,13 @@ body {
   line-height: 1.6;
   background: var(--tj-color-theme-bg);
 }
+@font-face {
+    font-family: 'autographyregular';
+    src: url('../fonts/autography-webfont.woff2') format('woff2'),
+         url('../fonts/autography-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 a {
   text-decoration: none;
@@ -12089,6 +12096,7 @@ START: Hero CSS
   z-index: -1;
 }
 .hero-top-content .hero-title {
+  font-family: 'autographyregular';
   margin-bottom: 0;
 }
 .hero-top-content .hero-title span {
@@ -12508,6 +12516,12 @@ START: Hero CSS
 .line-clamp {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+.line-clamp-service {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }

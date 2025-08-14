@@ -492,7 +492,7 @@
   const offcanvas = new bootstrap.Offcanvas(offcanvasEl);
 
   toggleBtn.addEventListener('click', () => {
-    if (offcanvasEl.classList.contains('Get a Quote')) {
+    if (offcanvasEl.classList.contains('Get a Consultation')) {
       offcanvas.hide();
     } else {
       offcanvas.show();
@@ -504,5 +504,5 @@
   });
 
   offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
-    toggleBtn.textContent = 'Get a Quote';
+    toggleBtn.textContent = 'Get a Consultation';
   });
