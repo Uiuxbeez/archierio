@@ -15091,7 +15091,7 @@ START: Video CSS
  .floating-toggle-btn {
       position: fixed;
       top: 50%;
-      right: -41px;
+      right: -74px;
       z-index: 1051;
       border-radius: 8px 8px 0px 0;
       transform: rotate(-90deg);
