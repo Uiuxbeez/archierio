@@ -598,12 +598,12 @@
                   <div class="difference-icon">
                      <i class="flaticon-best-seller"></i>
                   </div>
-                  <div class="difference-content">
+                  <div class="expand-blk difference-content">
                      <h5 class="title">Theme-Based Designs</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>From modern minimalism to classic elegance, we bring your vision to life with handpicked themes that match your taste and elevate your space.</p>
                      </div>
-                     <div id="toggle" class="toggle-btn">Show more</div>
+                     <div class="toggle toggle-btn">Show more</div>
                   </div>
                   <div class="difference-shape">
                      <img src="images/service-1.png" alt="Images">
@@ -615,12 +615,12 @@
                   <div class="difference-icon">
                      <i class="flaticon-creative-thinking"></i>
                   </div>
-                  <div class="difference-content">
+                  <div class="expand-blk difference-content">
                      <h5 class="title">Premium Materials</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>We use only top-tier materials that combine aesthetics and durability, ensuring a refined finish that stands the test of time.</p>
                      </div>
-                     <div id="toggle" class="toggle-btn">Show more</div>
+                     <div class="toggle toggle-btn">Show more</div>
                   </div>
                   <div class="difference-shape">
                      <img src="images/service-1.png" alt="Images">
@@ -632,12 +632,12 @@
                   <div class="difference-icon">
                      <i class="flaticon-continuous-improvement"></i>
                   </div>
-                  <div class="difference-content">
+                  <div class="expand-blk difference-content">
                      <h5 class="title">10-Year Warranty</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>Peace of mind, guaranteed. Every Archierio project comes with a 10-year warranty, assuring you of quality, craftsmanship, and long-term value.</p>
                      </div>
-                     <div id="toggle" class="toggle-btn">Show more</div>
+                     <div class="toggle toggle-btn">Show more</div>
                   </div>
                   <div class="difference-shape">
                      <img src="images/service-1.png" alt="Images">
@@ -649,12 +649,12 @@
                   <div class="difference-icon">
                      <i class="flaticon-maintenance"></i>
                   </div>
-                  <div class="difference-content">
+                  <div class="expand-blk difference-content">
                      <h5 class="title">Smartly Priced, Stylishly Designed</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>Get the look and feel of luxury without overspending. Our designs balance sophistication and affordability seamlessly.</p>
                      </div>
-                     <div id="toggle" class="toggle-btn">Show more</div>
+                     <div class="toggle toggle-btn">Show more</div>
                   </div>
                   <div class="difference-shape">
                      <img src="images/service-1.png" alt="Images">
@@ -667,12 +667,12 @@
                   <div class="difference-icon">
                      <i class="flaticon-best-seller"></i>
                   </div>
-                  <div class="difference-content">
+                  <div class="expand-blk difference-content">
                      <h5 class="title">Timely Delivery</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>We value your time. Our streamlined process ensures your dream home is delivered on schedule without compromising on quality or design.</p>
                      </div>
-                     <div id="toggle" class="toggle-btn">Show more</div>
+                     <div class="toggle toggle-btn">Show more</div>
                   </div>
                   <div class="difference-shape">
                      <img src="images/service-1.png" alt="Images">
@@ -684,12 +684,12 @@
                   <div class="difference-icon">
                      <i class="flaticon-creative-thinking"></i>
                   </div>
-                  <div class="difference-content">
+                  <div class="expand-blk difference-content">
                      <h5 class="title">Free Consultation</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>Get started with a complimentary consultation. Our experts will guide you through the design journey with no upfront commitment.</p>
                      </div>
-                     <div id="toggle" class="toggle-btn">Show more</div>
+                     <div class="toggle toggle-btn">Show more</div>
                   </div>
                   <div class="difference-shape">
                      <img src="images/service-1.png" alt="Images">
@@ -705,7 +705,7 @@
                   </div>
                   <div class="difference-content">
                      <h5 class="title">Aesthetics</h5>
-                     <div id="text" class="desc line-clamp">
+                     <div class="text desc line-clamp">
                         <p>We blend style and practicality using over 1000 design concepts to create timeless, purposeful spaces as per your needs.</p>
                      </div>
                   </div>
@@ -1873,13 +1873,27 @@
       <script src="js/wow.min.js"></script>
       <script src="js/main.js"></script>
    
-      <script>
+      <!-- <script>
   const text = document.getElementById('text');
   const toggle = document.getElementById('toggle');
 
   toggle.addEventListener('click', () => {
     text.classList.toggle('expanded');
     toggle.textContent = text.classList.contains('expanded') ? 'Show less' : 'Show more';
+  });
+</script> -->
+
+<script>
+  document.querySelectorAll('.expand-blk').forEach(section => {
+    const text = section.querySelector('.text');
+    const toggle = section.querySelector('.toggle');
+
+    toggle.addEventListener('click', () => {
+      text.classList.toggle('expanded');
+      toggle.textContent = text.classList.contains('expanded')
+        ? 'Show less'
+        : 'Show more';
+    });
   });
 </script>
 
