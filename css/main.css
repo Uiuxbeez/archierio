@@ -11712,7 +11712,7 @@ START: Hero CSS
 ----------------------------------------*/
 .tj-hero-section {
   background: var(--tj-color-theme-bg);
-  padding-top: 80px;
+  padding-top: 20px;
   position: relative;
   z-index: 2;
 }
@@ -12101,13 +12101,13 @@ START: Hero CSS
 }
 .hero-top-content .hero-title span {
   display: block;
-  max-width: 640px;
+  /* max-width: 640px; */
   width: 100%;
   word-wrap: break-word;
 }
 .hero-top-content .desc {
-  max-width: 500px;
-  position: absolute;
+  /* max-width: 500px;
+  position: absolute; */
   right: 0px;
   top: 35px;
 }
@@ -12122,7 +12122,7 @@ START: Hero CSS
     font-size: 120px;
   }
   .hero-top-content .hero-title span {
-    max-width: 540px;
+    /* max-width: 540px; */
   }
   .hero-top-content .desc {
     right: 40px;
@@ -12133,11 +12133,11 @@ START: Hero CSS
     max-width: 950px;
   }
   .hero-top-content .hero-title {
-    font-size: 68px;
-    line-height: 113px;
+    font-size: 50px;
+    line-height: 77px;
   }
   .hero-top-content .hero-title span {
-    max-width: 420px;
+    /* max-width: 420px; */
   }
   .hero-top-content .desc {
     right: 40px;
@@ -12465,7 +12465,7 @@ START: Hero CSS
   }
 }
 .hero-bottom-content .tj-brand-slider2 {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 .link-style {
   color: #b99a80;
@@ -12490,7 +12490,7 @@ START: Hero CSS
   font-size: 23px;
   flex-direction: column;
   align-items: center;
-  background-color: #32343b;
+  /* background-color: #32343b; */
   border-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -15116,4 +15116,14 @@ START: Video CSS
   .text-xs {
     font-size: 23px;
     line-height: 20px;
+  }
+
+  .bg-white {
+    background-color: white;
+  }
+  .bg-white h1,h2,h3,h4,h5,h6 {
+    color: #141414;
+  }
+  .border-top {
+    border-top:1px solid #141414;
   }
