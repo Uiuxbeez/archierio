@@ -488,6 +488,8 @@ img {
 .tj-primary-btn-two:hover,
 .tj-primary-btn:hover {
   color: var(--tj-color-common-white);
+  background-color: #141414;
+  border-color: #141414;
 }
 .tj-primary-btn-five:hover::after, .tj-primary-btn-five:hover::before,
 .tj-primary-btn-four:hover::after,
@@ -4008,7 +4010,7 @@ START: Theme Animation CSS
 START: Theme Breadcrumb CSS
 ----------------------------------------*/
 .breadcrumb-wrapper {
-  padding-top: 85px;
+  padding-top: 23px;
   padding-bottom: 0;
   position: relative;
   z-index: 2;
@@ -4046,11 +4048,11 @@ START: Theme Breadcrumb CSS
 .breadcrumb-content-area {
   position: relative;
   z-index: 9;
-  padding: 35px 0 110px;
+  padding: 9px 0 32px;
 }
 .breadcrumb-content-area .breadcrumb-heading .breadcrumb-title {
   color: var(--tj-color-common-white);
-  font-size: 100px;
+  font-size: 59px;
   margin-bottom: 30px;
   font-weight: var(--tj-fw-medium);
   line-height: 1;
@@ -5657,8 +5659,8 @@ START: About CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  /* -ms-flex-wrap: wrap;
+      flex-wrap: wrap; */
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -6717,7 +6719,7 @@ START: Service CSS
   font-size: 24px;
   font-weight: var(--tj-fw-medium);
   font-family: var(--tj-ff-heading);
-  color: var(--tj-color-common-white);
+  color: #141414;
 }
 .service-accordion .tabs-content-area .tabs-item .service-arrow {
   color: var(--tj-color-theme-primary);
@@ -7428,7 +7430,7 @@ START: Roll CSS
   z-index: 3;
   overflow: hidden;
   background-color: var(--tj-color-theme-bg);
-  padding-bottom: 20px;
+  padding:20px 0px;
 }
 .tj-roll-section.style-2 {
   padding-bottom: 0;
@@ -7457,7 +7459,7 @@ START: Roll CSS
 }
 
 .tj-roll-section-three {
-  padding-bottom: 120px;
+  padding-bottom: 0px;
 }
 
 .slide-roll {
@@ -7475,7 +7477,7 @@ START: Roll CSS
 }
 .slide-roll .roll-box .roll-item .text {
   padding: 0 25px;
-  font-size: 180px;
+  font-size: 32px;
   font-weight: var(--tj-fw-sbold);
   font-family: var(--tj-ff-heading);
   text-align: center;
@@ -7584,7 +7586,7 @@ START: Roll CSS
 }
 .tj-roll-style-one .roll-box .slide-roll .roll-box .roll-item .text {
   padding: 0 15px;
-  font-size: 180px;
+  font-size: 77px;
   font-weight: var(--tj-fw-sbold);
   font-family: var(--tj-ff-heading);
   line-height: 1;
@@ -7736,7 +7738,7 @@ START: Roll CSS
 }
 .tj-roll-style-two .roll-box .slide-roll .roll-box .roll-item .text {
   padding: 0 25px;
-  font-size: 180px;
+  font-size: 77px;
   font-weight: var(--tj-fw-sbold);
   font-family: var(--tj-ff-heading);
   text-align: center;
@@ -9191,7 +9193,7 @@ START: Team CSS
 
 .team-bottom-content-area {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -9348,9 +9350,13 @@ START: Team CSS
   width: 100%;
   padding: 60px 40px 60px 60px;
   opacity: 0;
+  color: #ffffff;
   visibility: hidden;
   -webkit-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
+}
+.team-item .team-content h5 {
+  color: #ffffff;
 }
 .team-item .team-content span {
   display: block;
@@ -11708,7 +11714,7 @@ START: Hero CSS
 ----------------------------------------*/
 .tj-hero-section {
   background: var(--tj-color-theme-bg);
-  padding-top: 20px;
+  padding-top: 140px;
   position: relative;
   z-index: 2;
 }
@@ -12458,7 +12464,7 @@ START: Hero CSS
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .hero-bottom-content .hero-wrapper {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
 }
 .hero-bottom-content .tj-brand-slider2 {
@@ -13248,13 +13254,14 @@ START: Award CSS
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 35px;
+  margin-top: 23px;
   position: relative;
   z-index: 2;
 }
@@ -13267,7 +13274,7 @@ START: Award CSS
 }
 .award-content-area .award-sec-title .title-1 {
   font-size: 180px;
-  -webkit-text-fill-color: var(--tj-color-theme-secondary);
+  -webkit-text-fill-color: #fdfdfd;
   -webkit-text-stroke: 1px var(--tj-color-border-8);
   font-weight: var(--tj-fw-bold);
   line-height: 1;
@@ -15132,3 +15139,22 @@ START: Video CSS
   .no-bg-img {
     background:none;
   }
+ 
+@media only screen and (max-width: 767px) {
+    .sec-left-image {
+      margin:0px auto;
+    }
+    .fun-fact-item .fun-fact-text {
+      max-width: 170px;
+    }
+}
+
+.mobile_menu .mean-bar:last-child {
+  display: none;
+}
+.hamburger_menu .mean-container .mean-bar {
+  margin-bottom: 0;
+}
+.hamburger_menu .mean-nav ul li:last-child a {
+  border:0px solid transparent;
+}
